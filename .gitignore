@@ -1,0 +1,73 @@
+# ========================
+# MERN Stack .gitignore
+# ========================
+
+# === Frontend (React/Vite) ===
+/node_modules
+/.env.local
+/.env.development.local
+/.env.test.local
+/.env.production.local
+.DS_Store
+*.log
+.cache/
+dist/
+build/
+.vscode/
+.idea/
+
+# === Backend (Node.js/Express) ===
+# Environment variables
+.env
+.env.development
+.env.test
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+*.pid
+*.seed
+*.pid.lock
+
+# Dependency directories
+node_modules/
+
+# Build files
+.coverage/
+.nyc_output/
+
+# Database files
+*.db
+*.sqlite
+
+# Misc
+*.swp
+*.swo
+*~
+.~lock.*
+
+# === IDE Specific ===
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# JetBrains IDEs (WebStorm, IntelliJ)
+.idea/
+*.iml
+
+# === OS Generated ===
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
