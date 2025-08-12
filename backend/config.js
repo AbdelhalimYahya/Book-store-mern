@@ -1,0 +1,1 @@
+export const mongodb = "mongodb+srv://AbdelhalemYahya:123aboood321@cluster0.m84mym6.mongodb.net/books-collection?retryWrites=true&w=majority&appName=Cluster0"
