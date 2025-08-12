@@ -2,12 +2,19 @@ import express from "express";
 import { mongodb } from "./config.js";
 import mongoose from "mongoose";
 import bookRoutes from "./routes/bookRoutes.js"
-import { Book } from "./models/bookModel.js";
+import cors from "cors";
+// import { Book } from "./models/bookModel.js";
 
 const PORT = 3012;
 const app = express();
 
-app.use(express.json())
+app.use(express.json());
+app.use(cors());
+app.use(cors({
+    origin: 'http://localhost:3012', // the vite react application local host
+    methods: ['GET' , 'POST' , 'PUT' , 'DELETE'],
+    allowedHeaders: ["Content-Type"]
+}))
 
 app.get('/' , (req , res) => {
     console.log(req);
