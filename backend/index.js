@@ -13,6 +13,20 @@ app.get('/' , (req , res) => {
     return res.status(234).send("welcome mi amigo")
 })
 
+//route to get all book for a client 
+app.get('/book' , async (req , res) => {
+    try {
+        const books = await Book.find({});
+        return res.status(200).json({
+            count: books.length,
+            data: books
+        })
+    } catch (error) {
+        console.log(error.message)
+        res.status(500).send({messsage: error.message})
+    }
+})
+
 app.post('/book' , async (req , res) => {
     try {
         if (
